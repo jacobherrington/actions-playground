@@ -1,0 +1,23 @@
+# This workflow welcomes new contributors with a message!
+
+# https://github.com/marketplace/actions/first-interaction (https://github.com/actions/first-interaction)
+
+name: "Welcome New Contributor"
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+steps:
+- uses: actions/first-interaction@v1.0.0
+  with:
+    repo-token: ${{ secrets.GITHUB_TOKEN }}
+    pr-message: |-
+      Congrats on making your first PR!
